@@ -7,13 +7,14 @@
     android:background="@color/blue_shade_1"
     tools:context=".MainActivity">
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/idRVItem"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        tools:listitem="@layout/grocery_rv_item"-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRVItem"
 
-<!--        />-->
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/todo_rv_item"
+
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/idFABAdd"
