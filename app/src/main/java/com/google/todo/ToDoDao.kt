@@ -14,6 +14,6 @@ interface ToDoDao {
 
 
     @Query("SELECT * fROM todo_items")
-   fun getAlltodoItems() : LiveData<List<todo>>
+   fun getAlltodoItems() : LiveData<List<todoItems>>
 
 }

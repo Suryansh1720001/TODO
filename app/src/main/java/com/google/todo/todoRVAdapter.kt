@@ -10,7 +10,7 @@ import com.google.todo.R
 import com.google.todo.todoItems
 
 
-class todoRVAdapter(var list: List<todoItems>, val todoItemClickInterface: todoItemClickInterface) : RecyclerView.Adapter<todoRVAdapter.todoViewHolder>() {
+class todoRVAdapter(var list: List<todoItems>, val TodoItemClickInterface: todoItemClickInterface) : RecyclerView.Adapter<todoRVAdapter.todoViewHolder>() {
 
 
 
@@ -35,7 +35,7 @@ class todoRVAdapter(var list: List<todoItems>, val todoItemClickInterface: todoI
     override fun onBindViewHolder(holder: todoViewHolder, position: Int) {
         holder.nameTV.text = list.get(position).itemName
         holder.deleteTV.setOnClickListener{
-            todoItemClickInterface.onItemClick(list.get(position))
+            TodoItemClickInterface.onItemClick(list.get(position))
         }
 
     }
