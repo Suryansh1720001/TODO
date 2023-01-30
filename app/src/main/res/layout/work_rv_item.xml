@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/blue_shade_2"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/lltodo"
+            >
+
+            <TextView
+                android:id="@+id/idTVItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                />
+
+           
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>
