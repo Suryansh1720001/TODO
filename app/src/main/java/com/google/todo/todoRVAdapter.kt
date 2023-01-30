@@ -1,4 +1,4 @@
-package com.google.groceryapp
+package com.google.todo
 
 import  android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.todo.R
-import com.google.todo.todoItems
 
 
 class todoRVAdapter(var list: List<todoItems>, val TodoItemClickInterface: todoItemClickInterface) : RecyclerView.Adapter<todoRVAdapter.todoViewHolder>() {
@@ -17,9 +15,6 @@ class todoRVAdapter(var list: List<todoItems>, val TodoItemClickInterface: todoI
     inner class todoViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val nameTV = itemView.findViewById<TextView>(R.id.idTVItemName)
         val deleteTV = itemView.findViewById<ImageView>(R.id.idTVDelete)
-
-
-
     }
 
 

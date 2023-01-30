@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
-interface ToDoDao {
+interface todoDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
    suspend fun insert(item : todoItems)

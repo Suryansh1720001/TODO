@@ -12,18 +12,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.groceryapp.todoRVAdapter
-import com.google.groceryapp.todoViewModel
-import com.google.groceryapp.todoViewModelFactory
 
 
-class MainActivity : AppCompatActivity() ,todoRVAdapter.todoItemClickInterface{
+
+class MainActivity : AppCompatActivity() , todoRVAdapter.todoItemClickInterface{
 
     lateinit var itemsRV : RecyclerView
     lateinit var addFAB : FloatingActionButton
     lateinit var list: List<todoItems>
     lateinit var todoRVAdapter: todoRVAdapter
-    lateinit var todoViewModel: todoViewModel
+    lateinit var TodoViewModel: todoViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,9 +36,9 @@ class MainActivity : AppCompatActivity() ,todoRVAdapter.todoItemClickInterface{
         itemsRV.adapter = todoRVAdapter
         val todoRepository = todoRepository(todoDatabase(this))
         val factory = todoViewModelFactory(todoRepository)
-        todoViewModel = ViewModelProvider(this,factory).get(todoViewModel::class.java)
+        TodoViewModel = ViewModelProvider(this,factory).get(todoViewModel::class.java)
 
-        todoViewModel.getAlltodoItems().observe(this,Observer{
+        TodoViewModel.getAlltodoItems().observe(this,Observer{
             todoRVAdapter.list = it
             todoRVAdapter.notifyDataSetChanged()
         })
@@ -71,7 +69,7 @@ class MainActivity : AppCompatActivity() ,todoRVAdapter.todoItemClickInterface{
             val itemName: String = itemEdt.text.toString()
             if ((itemName.isNotEmpty())) {
                 val items = todoItems(itemName)
-                todoViewModel.insert(items)
+                TodoViewModel.insert(items)
                 Toast.makeText(applicationContext, "Item inserted", Toast.LENGTH_LONG).show()
                 todoRVAdapter.notifyDataSetChanged()
                 gdialog.dismiss()
@@ -85,8 +83,8 @@ class MainActivity : AppCompatActivity() ,todoRVAdapter.todoItemClickInterface{
     }
 
 
-    override fun onItemClick(groceryItems: todoItems) {
-        todoViewModel.delete(groceryItems)
+    override fun onItemClick(todoItems: todoItems) {
+        TodoViewModel.delete(todoItems)
         todoRVAdapter.notifyDataSetChanged()
         Toast.makeText(applicationContext,"Item Deleted",Toast.LENGTH_LONG).show()
     }

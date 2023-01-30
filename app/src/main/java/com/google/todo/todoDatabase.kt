@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [todoItems::class],version=1)
 abstract class todoDatabase : RoomDatabase() {
 
-    abstract fun gettodoDao():ToDoDao
+    abstract fun gettodoDao():todoDao
 
     companion object {
         @Volatile
@@ -26,7 +26,7 @@ abstract class todoDatabase : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 todoDatabase::class.java,
-                "Grocery.db"
+                "todo.db"
             ).build()
     }
 }
