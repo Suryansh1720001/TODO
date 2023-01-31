@@ -2,10 +2,13 @@
 
 # Project: Task-Tonic 
 
-Many a time it happens that we woke up with a plan in mind to execute for the rest of the day but we often indulge in activities we don’t want to do we do it 
-because we think that we have so much time to execute our plan. We end up wasting a lot of our precious time on stuff that is not really meaningful to us.
-Sometimes we end up having a pile of tasks to accomplish with a very limited time at hand. Often times backlogs are not even possible to complete,
-for example studying the whole syllabus just before the exam! <br>
+In todays world, we tend to putting off doing something that is important to do, till another day or time, because we don’t want to do it at the moment. Let’s consider a simple scenario - we may want to register for some scholarship and we procrastinate so much that we eventually end up missing the deadline!
+<br>
+## Description
+* This is an Android application which is a Task Manager which can serve as a daily task planner.
+* Users can categorize their taks into different categories that help them prioritize tasks and implement them effectively.
+* It also provides a monthly analysis of the work done by the user. 
+
 
 
 
