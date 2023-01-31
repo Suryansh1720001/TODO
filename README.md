@@ -1,4 +1,4 @@
-<img src="https://github.com/Suryansh1720001/Task-Tonic/blob/master/TaskTonicCoverImage.jpeg" alt="Cover Image" width="100%"/>
+<img src="https://github.com/Suryansh1720001/Task-Tonic/blob/master/TaskTonicCoverImage.png" alt="Cover Image" width="100%"/>
 
 # Project: Task-Tonic 
 
